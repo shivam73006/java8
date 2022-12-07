@@ -1,5 +1,7 @@
 package com.javatechie;
 
+import com.javatechie.lambda.demo.mapVsflatMap.EkartDataBases;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -8,8 +10,8 @@ public class OptionalDemo {
 
 
 
-    public static Customer getCustomerByEmailId(String email) throws Exception {
-        List<Customer> customers = EkartDataBase.getAll();
+    public static customer getCustomerByEmailId(String email) throws Exception {
+        List<customer> customers = EkartDataBases.getAll();
        return customers.stream()
                 .filter(customer -> customer.getEmail().equals(email))
                 .findAny().orElseThrow(()->new Exception("no customer present with this email id"));
@@ -18,7 +20,7 @@ public class OptionalDemo {
 
     public static void main(String[] args) throws Exception {
 
-        Customer customer=new Customer(101, "john", "test@gmail.com", Arrays.asList("397937955", "21654725"));
+        customer customer=new customer(101, "john", "test@gmail.com", Arrays.asList("397937955", "21654725"));
 
         //empty
         //of
